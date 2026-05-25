@@ -1,4 +1,4 @@
-# Persuasion Dialogue System (Long-Horizon Memory)
+# MERIT System
 
 A sophisticated AI simulation where an Agent persuades a User to buy motor insurance, featuring a **10-year memory horizon**, **personality evolution**, and **continuous learning** via an LLM-as-a-Judge.
 
@@ -66,29 +66,3 @@ Artifacts are saved to the `output/` directory:
 
 ---
 
-##  Architecture Overview
-
-```mermaid
-graph TD
-    User[User Persona] <-->|Dialogue| Agent[Persuasion Agent]
-    Agent -->|Select Strategy| Graph[Dense Strategy Graph]
-    User -->|Select Intent| IntentGraph[Intent Graph]
-    
-    subgraph "Learning Loop"
-        Judge[LLM Judge] -->|Evaluate| Agent
-        Judge -->|Update Weights| Graph
-    end
-    
-    subgraph "Memory System"
-        Session[Level 1: Session]
-        Strategy[Level 2: Strategy Outcome]
-        Latent[Level 3: Latent State]
-        Drift[Level 4: Persona Drift]
-        Concession[Level 5: Concession]
-    end
-    
-    Agent <--> Memory[Memory Manager]
-    Memory <--> Session
-    Memory <--> Latent
-    ...
-```
