@@ -33,8 +33,8 @@ class PromptBuilder:
 
     def __init__(
         self,
-        agent_name: str = "Amrit",
-        company_name: str = "Amrit Insurance Co.",
+        agent_name: str = "ABC",
+        company_name: str = "Gen67ABC Inc",
     ):
         self.agent_name = agent_name
         self.company_name = company_name
