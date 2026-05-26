@@ -16,7 +16,7 @@ CONVERSATIONS_PATH = os.path.join(PROJECT_DIR, "output", "conversations.json")
 # ============================================================
 # EMBEDDING MODEL
 # ============================================================
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # sentence-transformers model
+EMBEDDING_MODEL = "gemma"  # sentence-transformers model
 
 # ============================================================
 # RETRIEVAL SETTINGS
